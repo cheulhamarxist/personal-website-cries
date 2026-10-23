@@ -4,12 +4,106 @@
     }
 
     to {
-        opactiy: 1;
+        opacity: 1;
     }
 }
 
+@keyframes floatUpPixel {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    pointer-events: none;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    list-style: none;
+}
+
+.hearts li {
+    position: absolute;
+    bottom: -50px;
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow:
+        4px 0 #ffa1a9, 8px 0 #ffa1a9, 16px 0 #ffa1a9, 20px 0 #ffa1a9,
+        0px 4px #ffa1a9, 4px 4px #ffa1a9, 8px 4px #ffa1a9, 12px 4px #ffa1a9, 16px 4px #ffa1a9, 20px 4px #ffa1a9, 24px 4px #ffa1a9,
+        0px 8px #ffa1a9, 4px 8px #ffa1a9, 8px 8px #ffa1a9, 12px 8px #ffa1a9, 16px 8px #ffa1a9, 20px 8px #ffa1a9, 24px 8px #ffa1a9,
+        4px 12px #ffa1a9, 8px 12px #ffa1a9, 12px 12px #ffa1a9, 16px 12px #ffa1a9, 20px 12px #ffa1a9,
+        8px 16px #ffa1a9, 12px 16px #ffa1a9, 16px 16px #ffa1a9,
+        12px 20px #ffa1a9;
+    animation: floatUpPixel 5s infinite linear;
+}
+
+.hearts li:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 6s;
+}
+
+.hearts li:nth-child(2) {
+    left: 25%;
+    animation-delay: 1.5s;
+    animation-duration: 4.5s;
+}
+
+.hearts li:nth-child(3) {
+    left: 45%;
+    animation-delay: 3s;
+    animation-duration: 7s;
+}
+
+.hearts li:nth-child(4) {
+    left: 65%;
+    animation-delay: 0.5s;
+    animation-duration: 5s;
+}
+
+.hearts li:nth-child(5) {
+    left: 85%;
+    animation-delay: 2.2s;
+    animation-duration: 5.5s;
+}
+
+html,
 body {
-    background-color: beige;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: pink;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #343434;
+    /* FFF2F5 good, just white kinda? but pinkish */
+    /* 2B2B2B I HATE THAT I LIKE THIS SO MUCH */
 
 }
 
@@ -34,10 +128,16 @@ header h1 {
 }
 
 header h5 {
-    color: #424242;
+    color: #626161;
     margin: 0;
 
     animation: fadeIn 3s forwards;
+}
+
+body>details {
+    max-width: 500px;
+    margin: 20px 0 20px 5%;
+    padding: 0 20px;
 }
 
 details details {
