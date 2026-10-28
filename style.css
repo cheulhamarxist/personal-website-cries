@@ -245,40 +245,44 @@ header h5 {
     box-shadow: 2px 2px 0px rgba(255, 73, 73, 0.5);
 }
 
-body>details {
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 55px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.boxes>div {
+    background-color: rgba(255, 255, 255, 54, 15);
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 4px 4px 0px rgba(255, 73, 73, 0.4);
+    transition: all 0.15s ease;
+}
+
+.boxes>div:hover {
+    background-color: rgba(255, 255, 255 0.25);
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px rgba(255, 73, 73, 0.5);
+}
+
+.boxes h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px rgba(255, 73, 73, 0.3);
+}
+
+.aboutme {
+    font-size: 1.2rem;
     max-width: 500px;
     margin: 20px 0 20px 5%;
     padding: 0 20px;
     position: relative;
-}
-
-details details {
-    margin-left: 25px;
-    margin-top: 8px;
-}
-
-details details p,
-details details ul {
-    margin-left: 20px;
-    margin-top: 1.1rem;
-}
-
-.projects p {
-    text-align: left;
-    font-size: 1.2rem;
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 0;
-}
-
-.games p {
-    text-align: left;
-    font-size: 1.2rem;
-    margin-left: 50px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0;
 }
 
 a:link {
